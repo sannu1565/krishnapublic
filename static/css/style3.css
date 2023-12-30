@@ -1,0 +1,156 @@
+/* 
+** The Header Media Queries **
+** Tweak as per your needs **
+*/
+.brand {
+    font-weight: bold;
+    font-size: 20px; }
+  .site-header {
+    position: relative;
+    background-color: #def7ff; }
+  .site-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: sticky;
+     padding-top: 1rem;
+    padding-bottom: 1rem; }
+    @media (min-width: 630px) {
+      .site-header__wrapper {
+        justify-content: initial; } }
+  @media (min-width: 630px) {
+    .site-header__end {
+      margin-left: auto; 
+    }
+}
+  @media (max-width: 629px) {
+    .site-header__end {
+      padding-right: 2rem; }
+       }
+  @media (min-width: 630px) {
+    .nav__wrapper {
+      display: flex; }
+  }
+  @media (max-width: 629px) {
+    .nav__wrapper {
+     
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      z-index: 0;
+      background-color: #d9f0f7;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
+      .nav__wrapper.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0); } }
+  
+  .nav__item a {
+    display: block;
+    padding: 1rem; 
+ padding-left: 0%;
+}
+    .nav{
+        display: flex;
+        align-items: start;   
+    }
+  .nav__toggle {
+    display: none; }
+    @media (max-width: 629px) {
+      .nav__toggle {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        top: 2rem; } 
+         .sign-upbtn{
+          position: absolute;
+          right: 100px;
+          top: 2rem;
+      
+          }.log-inbtn{
+            display: none;
+            /* margin-top: 5px;
+            position: absolute;
+            right: 100px;
+            top:4rem; */
+          }
+     }
+     @media screen and (max-width: 670px) {
+      .card-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+      .addmissionprocess{
+        flex-direction: column-reverse;
+
+      }
+     .addi img{
+     margin: none;
+     padding: none;
+      width: 300px;
+         }
+    }
+    @keyframes pulse {
+      0% {
+          transform: scale(1); /* Initial size */
+      }
+      50% {
+          transform: scale(1.2); /* Grow to 1.2x size */
+      }
+      100% {
+          transform: scale(1); /* Return to original size */
+      }
+  }
+  @media screen and (max-width: 680px) {  
+    .desc{
+      display:none ;
+    }
+  } 
+  @media screen and (max-width: 680px) {
+  .banar{
+      flex-direction: column;
+  
+    }
+  }
+  @media  screen and (min-width: 1300px) {
+    
+    .fcard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    }
+    .desc{
+      height: 800px;
+    }
+    .addmissionprocess{
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }@media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    .footer__addr {
+      flex: 1 0px;
+    }
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }

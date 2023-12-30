@@ -1,0 +1,266 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+ 
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+ <link rel="stylesheet"  href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style1.css">
+  <link rel="stylesheet" href="/static/css/style3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <title> wabsite</title>
+<style>
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9; 
+}
+
+ .signin {
+   background-color: #f1f1f101;
+  text-align: center;
+}
+
+  .signup_form{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+
+}
+.container-signup h1{
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient( 
+    to right, #f32170, #ff6b08, 
+     #cf23cf, #eedd44); 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+   -webkit-background-clip: text; 
+}
+.container-signup p{
+
+  font-size: 1.3rem;
+   color: red;
+}
+</style>
+  </head>
+  <body>
+    <saction>
+     <!-- Header Start -->
+     <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <div class="site-header__start">
+          <a href="#" class="brand">
+            <img src="/static/img/Online Education Badge Logo.png" alt="">
+
+          </a>
+        </div>
+        <div class="site-header__midde">
+          <nav class="nav">
+            <button class="nav__toggle  btn btn-primary " aria-expanded="false" type="button">
+              menu
+            </button>
+            <ul class="nav__wrapper">
+              <li class="nav__item"><a href="{% url 'index'%} ">Home</a></li>
+              <li class="nav__item"><a href="{% url 'about'%}">About</a></li>
+              <li class="nav__item"><a href="{% url 'admission'%}">Admission</a></li>
+              <li class="nav__item"><a href="{% url 'index'%}#form">Enquiry</a></li>
+              <li class="nav__item"><a href="#contact">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-header__end">
+          <a class="btn btn-primary log-inbtn " href="{% url 'login' %}">log in</button></a>
+          <a class="btn btn-primary sign-upbtn "herf ="{% url 'signup'%}">Sign in</a>
+          <!-- <a class="button" href="#">log in</a> -->
+
+        </div>
+      </div>
+    </header>
+    
+    <!-- Header End -->
+   
+    </saction>
+   
+
+<div class="signup_form">
+           
+            <form method="post" action="{% url 'ragister' %}">
+              {% csrf_token %}
+              {{p}}
+              <div class="container-signup">
+                <h1>SIGN UP</h1>
+                <hr>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                
+               <label for="name">username</label>
+             <input type="text" id="name" name="username" placeholder="Your name..">
+              
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+
+            <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="password_repeat" id="psw_repeat" required> -->
+            <hr>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="registerbtn btn-primary">Register</button>
+          </div>
+          
+          <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+          </div>
+        </form>
+   
+</div>
+
+     <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo"><img src="/static/img/Online Education Badge Logo.png" alt=""></h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+             Plot no-75 Ramgarh cantoment ramgarh jharkhand 829122<br>
+                
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+      
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+      
+            
+          </address>
+      
+      
+      
+        </div>
+
+        <section id="contact">
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Addmission</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Addmission process</a>
+              </li>
+      
+              <li>
+                <a href="#">Fee payment</a>
+              </li>
+                  
+              <li>
+                <a href="#">Programs</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Support</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">Ragistration</a>
+              </li>
+              
+              <li>
+                <a href="#">Log in</a>
+              </li>
+              
+              <li>
+                <a href="#">Sign up</a>
+              </li>
+              
+              <li>
+                <a href="#">Complain</a>
+              </li>
+              
+              <li>
+                <a href="#">Enquiry-form</a>
+              </li>
+              
+              <li>
+                <a href="#">NEP</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2023 Something. All rights reserved.</p>
+          
+          <div class="legal__links">
+            <span>Made with <span class="heart">♥</span> krishna tech </span>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- javaScript; choose one of the two! -->  
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
