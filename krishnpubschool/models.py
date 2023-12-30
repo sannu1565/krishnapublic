@@ -30,3 +30,4 @@ class ragister(models.Model):
 
                 def __str__(self): 
                  return "signup"
+                
